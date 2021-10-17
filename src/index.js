@@ -2,7 +2,9 @@ import Template from './templates/Template.js';
 import './styles/main.styl';
 import './styles/vars.styl';
 
-(async function App() {
+console.log(Template);
+
+(function App() {
   const main = null || document.getElementById('main');
-  main.innerHTML = await Template();
+  main.innerHTML = Template();
 })();
