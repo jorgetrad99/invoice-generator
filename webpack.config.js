@@ -2,6 +2,7 @@ const path = require('path');
 /* const HtmlWebpackPlugin = require('html-webpack-plugin'); */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -25,6 +26,18 @@ module.exports = {
         test: /\.css|.styl$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'stylus-loader'],
       },
+      {
+        test: /\.(png|jp(e*)g|svg|gif)$/,
+        /* use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'images/[hash]-[name].[ext]',
+            },
+          },
+        ], */
+        type: 'asset/resource',
+      },
     ],
   },
   plugins: [
@@ -34,5 +47,13 @@ module.exports = {
       filename: './index.html',
     }),
     new MiniCssExtractPlugin(),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, 'src', 'assets/icons'),
+          to: 'assets/icons',
+        },
+      ],
+    }),
   ],
 };

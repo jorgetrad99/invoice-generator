@@ -1,3 +1,6 @@
+import Cart from '../assets/icons/cart.svg';
+import AddToCart from '../assets/icons/addToCart.svg';
+
 const Template = () => {
   return `
     <header>
@@ -6,17 +9,29 @@ const Template = () => {
         <nav>
           <ul class='nav'>
             <li>
-              <a href='#'>Profile</a>
+              <a href='#'>Market</a>
             </li>
             <li>
-              <a href='#'>Market</a>
+              <a href='#'>Profile</a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
     <main>
+      <div class="cart-container">
+        <img src="${Cart}" alt="Shoping cart icon" />
+      </div>
       <div class="products-container">
+        <div class="product-container">
+          
+        </div>
+        <div class="product-container">
+          
+        </div>
+        <div class="product-container">
+          
+        </div>
         <div class="product-container">
           
         </div>
