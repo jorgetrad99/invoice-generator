@@ -1,18 +1,6 @@
 import '../firebase/firebaseConfig.js';
 import Cart from '../assets/icons/cart.svg';
 import AddToCart from '../assets/icons/addToCart.svg';
-import { db } from '../firebase/firebaseConfig.js';
-import { collection, getDocs } from 'firebase/firestore';
-
-const getData = async () => {
-  const products = await getDocs(collection(db, 'products'));
-  products.forEach((document) => {
-    console.log(document.data());
-  });
-  /* console.log(products); */
-};
-
-getData();
 
 const Template = () => {
   return `
@@ -40,22 +28,7 @@ const Template = () => {
           <h3>(0)</h3>
         </div>
         <br />
-      </div>
-      <div class="products-container">
-        <div class="product-container">
-          <img src="${Cart}" class="product-image"></img>
-        </div>
-        <div class="product-container">
-          <img src="${Cart}" class="product-image"></img>
-        </div>
-        <div class="product-container">
-          <img src="${Cart}" class="product-image"></img>
-        </div>
-        <div class="product-container">
-          <img src="${Cart}" class="product-image"></img>
-        </div>
-        <div class="product-container">
-          <img src="${Cart}" class="product-image"></img>
+        <div class="products-container">
         </div>
       </div>
     </main>

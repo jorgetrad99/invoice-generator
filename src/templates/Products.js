@@ -1,24 +1,123 @@
 import { db } from '../firebase/firebaseConfig.js';
 import { collection, getDocs } from 'firebase/firestore';
+import MinusIcon from '../assets/icons/minus-icon.svg';
+import PlusIcon from '../assets/icons/plus-icon.svg';
 
-const getData = async () => {
-  const products = await (await getDocs(collection(db, 'products'))).data();
-  /* products.forEach((document) => {
-    console.log(document.data());
+var productsLayout = ``;
+
+/*const getData = async () => {
+  const products = await getDocs(collection(db, 'products'));
+  console.log(products.docs);
+  products.forEach((document) => {
+    console.log(document.data().name);
+    productsLayout += `
+        <div class="product-container">
+            <img src="${document.data().urlImage}" alt="${
+      document.data().name
+    } image" class="product-image"></img>
+        </div>
+    `;
   }); */
-  /* console.log(products); */
+
+const getData = () => {
+  productsLayout += `
+      <div class="product-container">
+        <img src="https://firebasestorage.googleapis.com/v0/b/e-shop-7fd53.appspot.com/o/apples.jpg?alt=media&token=740b0785-ca1d-4b27-b5a8-7d3fa16634c5" alt="Apple image" class="product-image"></img>
+        <div class="info-product">
+          <div>
+            <h3>Apples</h3>
+            <p>$56.41</p>
+          </div>
+          <div class="addToCart-container">
+            <div class="counter-container">
+              <div class="increase-counter-container">
+                <img src="${MinusIcon}" class="icon" alt="Minus icon" />
+              </div>
+              <p>0</p>
+              <div class="decrease-counter-container">
+                <img src="${PlusIcon}" class="icon" alt="Plus icon" />
+              </div>
+            </div>
+            <div class="addToCart-button">
+            
+            </div>
+          </div>
+        </div>
+      </div>  
+      <div class="product-container">
+        <img src="https://firebasestorage.googleapis.com/v0/b/e-shop-7fd53.appspot.com/o/banana.jpg?alt=media&token=05ead631-14b7-410b-b578-4324ede1f0c0" alt="Banana image" class="product-image"></img>
+        <div class="info-product">
+          <div>
+            <h3>Bananas</h3>
+            <p>$32.13</p>
+          </div>
+          <div class="addToCart-container">
+            <div class="counter-container">
+              <div class="increase-counter-container">
+                <img src="${MinusIcon}" class="icon" alt="Minus icon" />
+              </div>
+              <p>0</p>
+              <div class="decrease-counter-container">
+                <img src="${PlusIcon}" class="icon" alt="Plus icon" />
+              </div>
+            </div>
+            <div class="addToCart-button">
+            
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product-container">
+        <img src="https://firebasestorage.googleapis.com/v0/b/e-shop-7fd53.appspot.com/o/water.jpg?alt=media&token=a0b77d1f-9f31-4b6b-bea1-f13812ed6234" alt="Bottle of water image" class="product-image"></img>
+        <div class="info-product">
+          <div>
+            <h3>Bottle of Water</h3>
+            <p>$56.42</p>
+          </div>
+          <div class="addToCart-container">
+            <div class="counter-container">
+              <div class="increase-counter-container">
+                <img src="${MinusIcon}" class="icon" alt="Minus icon" />
+              </div>
+              <p>0</p>
+              <div class="decrease-counter-container">
+                <img src="${PlusIcon}" class="icon" alt="Plus icon" />
+              </div>
+            </div>
+            <div class="addToCart-button">
+            
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product-container">
+        <img src="https://firebasestorage.googleapis.com/v0/b/e-shop-7fd53.appspot.com/o/watermelon.jpg?alt=media&token=e09eebce-7e51-4437-8c29-da4ef11b4e4f" alt="Watermelon image" class="product-image"></img>
+        <div class="info-product">
+          <div>
+            <h3>Watermelon</h3>
+            <p>$38.48</p>
+          </div>
+          <div class="addToCart-container">
+            <div class="counter-container">
+              <div class="increase-counter-container">
+                <img src="${MinusIcon}" class="icon" alt="Minus icon" />
+              </div>
+              <p>0</p>
+              <div class="decrease-counter-container">
+                <img src="${PlusIcon}" class="icon" alt="Plus icon" />
+              </div>
+            </div>
+            <div class="addToCart-button">
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+
+  console.log(productsLayout);
 };
 
 getData();
 
-const productsContainer = async () => {
-  var productsCont = ``;
-  /* await produc */
-  return `
-        <div class="products-container">
-            <div class="product-container">
-                <img src="${Cart}" class="product-image"></img>
-            </div>
-        </div>
-    `;
-};
+export { productsLayout };
