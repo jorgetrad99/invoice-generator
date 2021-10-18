@@ -64,32 +64,81 @@ header {
 
 main 
   height: 92vh
+  margin: 1.5rem 0
+
+.cart-container {
+  display: flex
+  flex-direction: column
+  align-items: center
+}
+
+.cart-counter {
+  background-color: #2c9fff
+  display: flex
+  justify-content: center
+  align-content: center
+  border-radius: 1.5rem
+  padding: .5rem
+  width: 17rem
+}
+
+.cart-counter > img, h3
+  margin: 1rem
+
+.icon {
+  filter: invert(100%)
+  width 30px
+}
 
 .products-container {
-  height: auto
-  width: auto
+  /* height: auto
+  width: auto */
+  
   margin: .5rem 2rem
   padding: .5rem
   background-color: #1b2949
   border-radius: 7px
+
+  display: grid
+  grid-template-columns: repeat(1, 1fr)
+  gap: .5rem
+  
+  grid-auto-rows: minmax(12rem, auto)
+  justify-items: stretch
 }
 
 .product-container {
-  min-height: 5rem
+  /* min-height: 12rem
+  max-width: 30rem */
   background-color: #1b2949
   border: 2px solid #25385B
-  margin: .5rem 0
+  /* margin: .5rem 0 */
 
   border-radius: 5px
 }
 
-/* #1b2949
-#0f172e
- */
-/* @media (min-width: 1000px)
-  .Container
-    display: flex
-    flex-direction: row */
+.product-image 
+  display: flex
+  align-content: center
+  background-color: gray
+  margin: 1rem
+  justify-content: center
+  width: 11rem
+  
+
+
+
+@media (min-width: 550px)
+  .products-container
+    grid-template-columns: repeat(2, 1fr)
+
+@media (min-width: 850px)
+  .products-container
+    grid-template-columns: repeat(3, 1fr)
+
+@media (min-width: 1200px)
+  .products-container
+    grid-template-columns: repeat(4, 1fr)
 
 
 

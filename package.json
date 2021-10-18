@@ -1,4 +1,5 @@
 {
+  "homepage": "https://github.com/jorgetrad99/Ejercicio_Media#readme",
   "name": "Ejercicio_Media",
   "version": "1.0.0",
   "description": "En este ejercicio tendrás que encontrar la varianza muestral de un arreglo de números. para este ejercicio recibirás una serie o un arreglo de números y con base en estos tendrás que usar la fórmula de la media muestral para obtener la media de los datos. ## Descripción Como bien se menciona, la idea de este ejercicio es que dados una serie de números tú seas capaz de aplicar la fórmula de la media la cual está dada por la siguiente ecuación:",
@@ -7,7 +8,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production --config webpack.config.js",
     "dev": "webpack --config webpack.config.dev.js",
-    "start": "webpack serve --mode development"
+    "start": "webpack serve --mode development",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -19,7 +22,6 @@
   "bugs": {
     "url": "https://github.com/jorgetrad99/Ejercicio_Media/issues"
   },
-  "homepage": "https://github.com/jorgetrad99/Ejercicio_Media#readme",
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/plugin-transform-runtime": "^7.15.8",
@@ -27,12 +29,18 @@
     "babel-loader": "^8.2.2",
     "copy-webpack-plugin": "^9.0.1",
     "css-loader": "^6.4.0",
+    "dotenv": "^10.0.0",
+    "gh-pages": "^3.2.3",
     "html-webpack-plugin": "^5.3.2",
     "mini-css-extract-plugin": "^2.4.2",
+    "node-loader": "^2.0.0",
     "stylus": "^0.55.0",
     "stylus-loader": "^6.2.0",
     "webpack": "^5.58.2",
     "webpack-cli": "^4.9.0",
     "webpack-dev-server": "^4.3.1"
+  },
+  "dependencies": {
+    "firebase": "^9.1.3"
   }
 }
