@@ -1,6 +1,5 @@
 import '../firebase/firebaseConfig.js';
 import Cart from '../assets/icons/cart.svg';
-import AddToCart from '../assets/icons/addToCart.svg';
 
 const Template = () => {
   return `
@@ -22,10 +21,9 @@ const Template = () => {
     <main>
       <div class="cart-container">
         <h4>Shoping cart is empty</h4>
-        <br />
         <div class="cart-counter">
           <img src="${Cart}" class="icon" alt="Shoping cart icon" />
-          <h3>(0)</h3>
+          <h3>0</h3>
         </div>
         <br />
         <div class="products-container">
