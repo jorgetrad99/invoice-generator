@@ -20,7 +20,7 @@ const Template = () => {
     </header>
     <main>
       <div class="cart-container">
-        <h4>Shoping cart is empty</h4>
+        <h4 id="message-cart">Shopping cart is empty, add your products!</h4>
         <div class="cart-counter">
           <img src="${Cart}" class="icon" alt="Shoping cart icon" />
           <h3>0</h3>

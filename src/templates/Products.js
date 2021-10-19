@@ -45,7 +45,7 @@ const getData = () => {
   productsLayout += `
       <div class="product-container">
         <img src="https://firebasestorage.googleapis.com/v0/b/e-shop-7fd53.appspot.com/o/apples.jpg?alt=media&token=740b0785-ca1d-4b27-b5a8-7d3fa16634c5" alt="Apple image" class="product-image"></img>
-        <div class="info-product" id="apples">
+        <div class="info-product">
           <div>
             <h3>Apples</h3>
             <p>$56.41</p>
