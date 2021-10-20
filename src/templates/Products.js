@@ -6,7 +6,7 @@ import AddToCart from '../assets/icons/addToCart.svg';
 
 var productsLayout = ``;
 
-/* const getData = async () => {
+const getData = async () => {
   const products = await getDocs(collection(db, 'products'));
   products.forEach((document) => {
     productsLayout += `
@@ -40,8 +40,8 @@ var productsLayout = ``;
   });
   console.log(productsLayout);
   return productsLayout;
-}; */
-const getData = () => {
+};
+/* const getData = () => {
   productsLayout += `
       <div class="product-container">
         <img src="https://firebasestorage.googleapis.com/v0/b/e-shop-7fd53.appspot.com/o/apples.jpg?alt=media&token=740b0785-ca1d-4b27-b5a8-7d3fa16634c5" alt="Apple image" class="product-image"></img>
@@ -141,6 +141,6 @@ const getData = () => {
       </div>
     `;
   return productsLayout;
-};
+}; */
 
 export { getData };

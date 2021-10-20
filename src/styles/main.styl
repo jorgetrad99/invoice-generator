@@ -207,6 +207,160 @@ main
   margin-right: .5rem
 
 
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(14, 18, 35, .8); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  position: relative;
+  background-color: #1b2949;
+  margin: auto;
+  min-height: 20rem
+  max-width: 48rem
+  padding: 0;
+  border-radius: 1rem
+  width: 90%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+.modal-content > div {
+  margin: 1rem 0
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: #d5d4e3
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #868991
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #1b2949;
+  color: #d5d4e3
+  border-radius: 1rem
+}
+
+.modal-body {
+  padding: 2px 16px;
+  color: #6f6874
+}
+
+.invoice-row {
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-content: center
+  margin: 1rem 0
+}
+
+.modal-footer {
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  padding: 2px 16px;
+  background-color: #1b2949;
+  color: #d5d4e3
+  border-radius: 1rem
+}
+
+.enter-code {
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: white
+  border-radius: .5rem
+  height: 4rem
+}
+
+.enter-code > input {
+  border: none;
+  margin: 0 1rem;
+  width: 11rem;
+  height: 3rem;
+  margin: 0
+  margin: 0 .5rem 
+  border: none
+}
+
+.enter-code >input:focus {
+  outline: none;
+}
+
+.enter-code > button {
+  color: #d5d4e3
+  background-color: #2c9fff  
+  width: 4rem
+  height: 4rem
+  margin: 0
+  border: none
+  border-radius: .5rem 
+  cursor pointer
+}
+
+.total-container {
+  width: 25rem  
+}
+
+.total, .totalByCode {
+  display: flex  
+  flex-direction: row 
+  justify-content: flex-end
+}
+
+.totalByCode {
+  display: none
+}
+
+.total p {
+  margin-left: 1rem   
+}
+
+.totalByCode p {
+  text-align: center
+  margin-left: 1rem 
+}
+
+
+
+
 @media (min-width: 560px)
   .products-container
     grid-template-columns: repeat(2, 1fr)

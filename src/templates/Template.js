@@ -1,8 +1,10 @@
-import '../firebase/firebaseConfig.js';
+/* import '../firebase/firebaseConfig.js'; */
 import Cart from '../assets/icons/cart.svg';
+import { Modal } from './Modal.js';
 
-const Template = () => {
-  return `
+const Main = () => {
+  /* console.log(Modal); */
+  const main = `
     <header>
       <div class='header'>
         <h2 href='#'>e-Shop</h2>
@@ -29,8 +31,12 @@ const Template = () => {
         <div class="products-container">
         </div>
       </div>
+      <div id="myModal" class="modal">
+        ${Modal}
+      </div>
     </main>
   `;
+  return main;
 };
 
-export default Template;
+export default Main;
