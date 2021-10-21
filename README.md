@@ -21,3 +21,7 @@
 2. Open your terminal in the proper directory
 3. Install de dependencies by running npm install
 4. Run npm run start to see the project in local on a browser window
+
+## Flow chart
+
+<img src="https://firebasestorage.googleapis.com/v0/b/e-shop-7fd53.appspot.com/o/Account%20ownership%20diagram%20example.png?alt=media&token=1fb00fe0-074d-4efc-a340-6d3ae62caa27">
