@@ -1,7 +1,7 @@
 import Main from './templates/Template.js';
 import { getData } from './templates/Products.js';
 import './styles/main.styl';
-import { doc } from '@firebase/firestore';
+/* import { doc } from '@firebase/firestore'; */
 
 let productsInCart = [];
 //Template
@@ -22,14 +22,12 @@ let productsInCart = [];
     getSubstractButton(i).onclick = () => {
       if (getCounter(i).innerHTML > 0) {
         substractingByOneToCounter(getCounter(i));
-        /* substractingByOneToCounter(getCartCounter()); */
       } else {
         alert('No se aceptan números negativos');
       }
     };
     getAddButton(i).onclick = () => {
       addingByOneToCounter(getCounter(i));
-      /* addingByOneToCounter(getCartCounter()); */
     };
 
     getAddToCartButton(i).onclick = () => {
@@ -40,8 +38,6 @@ let productsInCart = [];
           'The amount of the product you want is required to add it to your shopping cart'
         );
       }
-      /* addingByOneToCounterCart(getCounter(i)); */
-      /* addingByOneToCounterCart(getCartCounter()); */
     };
   }
 
@@ -58,7 +54,6 @@ let productsInCart = [];
     }
   };
 
-  /* const invoice_row = document.getElementsByClassName('invoice-row')[0]; */
   const span = document.getElementsByClassName('close')[0];
   const totalByCode = document.getElementsByClassName('totalByCode')[0];
   span.onclick = () => {
@@ -164,19 +159,6 @@ function fillInvoice() {
   const invoice_rows = document.getElementsByClassName('invoice-rows')[0];
 
   productsInCart.forEach((index1) => {
-    /* productsInCart.forEach((index2) => {
-      console.log(productsInCart);
-      if (
-        productsInCart.indexOf(index1) !== productsInCart.indexOf(index2) &&
-        index1.name == index2.name
-      ) {
-        index1.units = index1.units + index2.units;
-        productsInCart.splice(index2, 1);
-      }
-      console.log(index1.units);
-      console.log(productsInCart);
-    }); */
-
     const item = `
     <div class="invoice-row">
       <p>(${index1.units})</p>
@@ -184,7 +166,6 @@ function fillInvoice() {
       <p>$${index1.price}</p>
       <p>$${(index1.price * index1.units).toFixed(2)}</p>
     </div>      
-    
   `;
     invoice_rows.insertAdjacentHTML('beforeend', item);
   });
